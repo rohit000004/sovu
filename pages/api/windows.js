@@ -11,7 +11,7 @@ const handler = async (req, res) => {
     try {
         await connectMongo();
 
-        const { name, email, phoneNumber, ...queryData } = req.body;
+        const { name0, email, phoneNumber, ...queryData } = req.body;
         console.log(req.body);
 
         let doorData = req.body;
@@ -22,12 +22,12 @@ const handler = async (req, res) => {
             doorData.blind = doorData.blind.name || '';
         }
 
-        const newDoor = new Window(doorData);
-        await newDoor.save();
-
         // Save the user in the database
-        const user = new User({ name, email, phoneNumber });
+        const user = new User({ name0, email, phoneNumber });
         await user.save();
+
+        const newDoor = new Window({ ...doorData, user: user._id });
+        await newDoor.save();
 
         if (!email) {
             return res.status(201).json({ success: true, message: "Data saved, but no email provided." });
@@ -52,7 +52,7 @@ const handler = async (req, res) => {
         const emailContent = `
         <div style="font-family: Arial, sans-serif;">
             <h3>Your Submission Details</h3>
-            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Name:</strong> ${name0}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Phone Number:</strong> ${phoneNumber}</p>
             <p><strong>Query Details:</strong></p>

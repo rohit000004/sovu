@@ -10,7 +10,7 @@ const ReceiptPage = () => {
 
 
     const [userData, setUserData] = useState({
-        name: "",
+        name0: "",
         email: "",
         phoneNumber: "",
     });
@@ -159,15 +159,15 @@ const ReceiptPage = () => {
 
                             <form onSubmit={handleSubmit}>
                                 <div className="my-1">
-                                    <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900">
+                                    <label htmlFor="name0" className="block mb-2 text-sm font-medium text-gray-900">
                                         Your Name
                                     </label>
                                     <input
-                                        name="name"
-                                        value={userData.name}
+                                        name="name0"
+                                        value={userData.name0}
                                         onChange={handleUserChange}
                                         type="text"
-                                        id="name"
+                                        id="name0"
                                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                         placeholder="Name"
                                         required
