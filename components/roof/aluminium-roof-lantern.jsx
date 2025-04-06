@@ -392,7 +392,7 @@ export default function AluminiumRoofLantern() {
                                 <div className="flex justify-center gap-10 flex-wrap cursor-pointer px-3 md:px-0">
                                     {Panes.map((pane) => (
                                         <div key={pane.name} onClick={() => handlePaneSelect(pane)}
-                                            className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedpane?.name === pane?.name ? 'border-[#63b2c4] bg-[#e2f4f4]' : ''}`}
+                                            className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedpane?.name === pane?.name ? 'border-[#016252] bg-[#e2f4f4]' : ''}`}
                                         >
                                             <img src={pane.image} height={200} width={150} className="object-contain" />
                                             <div className="text-center mt-2">{pane.name}</div>
@@ -448,7 +448,7 @@ export default function AluminiumRoofLantern() {
 
                                                 <div
                                                     className="p-4 text-white font-semibold md:max-w-[416px]"
-                                                    style={{ background: "rgb(99, 178, 196)" }}
+                                                    style={{ background: "#016252" }}
                                                 >
                                                     <p className="text-center text-2xl mb-4">Enter Dimensions</p>
                                                     <div className="flex gap-8 max-w-96 mb-4">
@@ -508,7 +508,7 @@ export default function AluminiumRoofLantern() {
 
                                 {Object.entries(colorOptionsoutside).map(([name, { color }]) => (
                                     <div key={name} className={`p-3 rounded-md border border-[#dfdede] hover:bg-[#e2f4f4] 
-                            ${outsidecolor === name ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"}
+                            ${outsidecolor === name ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"}
                         `} onClick={() => handleoutsideColorChange(name)} >
 
                                         <div className="md:w-[200px] md:h-[150px] w-[130px] h-[100px]" style={{ backgroundColor: color }} ></div>
@@ -531,7 +531,7 @@ export default function AluminiumRoofLantern() {
 
                                 {Object.entries(colorOptionsinside).map(([name, { color, image }]) => (
                                     <div key={name} className={`p-3 rounded-md border border-[#dfdede] hover:bg-[#e2f4f4] 
-                            ${insidecolor === name ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"}
+                            ${insidecolor === name ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"}
                         `} onClick={() => handleinsideColorChange(name)} >
 
                                         <div className="md:w-[200px] md:h-[150px] w-[130px] h-[100px]" style={{ backgroundColor: color }} ></div>
@@ -557,7 +557,7 @@ export default function AluminiumRoofLantern() {
                                         {Glass.map((glass) => (
                                             <div key={glass.name} onClick={() => handleglass(glass)}
                                                 className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectglass?.name === glass.name)
-                                                    ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                                    ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                             >
                                                 <img src={glass.image} height="150" width="150" className="object-contain" />
                                                 <div className="text-center mt-2">{glass.name}</div>
@@ -600,7 +600,7 @@ export default function AluminiumRoofLantern() {
                             <div
                                 key={section.id}
                                 className={`font-bold px-5 pt-2 pb-3 text-[12.8px] whitespace-nowrap
-                    ${section.id <= currentstep ? "bg-[#63b2c4] text-white" : "text-[#63b2c4]"}
+                    ${section.id <= currentstep ? "bg-[#016252] text-white" : "text-[#016252]"}
                     ${section.id === currentstep ? "rounded-tr-lg rounded-br-lg" : ""}
                 `}
                             >

@@ -441,7 +441,7 @@ export default function AluminiumShaped() {
                                         <img src={displayImage} alt="Selected Window" className="w-64 h-64 object-contain mx-auto" />
                                         <button
                                             onClick={toggleImage}
-                                            className="mt-2 px-4 py-2 bg-[#63b2c4] text-white rounded-lg"
+                                            className="mt-2 px-4 py-2 bg-[#016252] text-white rounded-lg"
                                         >
                                             {isOutside ? "View Inside Image" : "View Outside Image"}
                                         </button>
@@ -469,7 +469,7 @@ export default function AluminiumShaped() {
 
                             <div className="flex justify-center mt-5">
                                 <button
-                                    className="mt-3 px-4 py-2 bg-[#63b2c4] text-white rounded-md"
+                                    className="mt-3 px-4 py-2 bg-[#016252] text-white rounded-md"
                                     onClick={() => setShowInside(!showInside)}
                                 >
                                     {showInside ? "Show Outside Color" : "Show Inside Color"}
@@ -485,7 +485,7 @@ export default function AluminiumShaped() {
                                 className="w-[150px] h-[350px]"
                             />
                             <button
-                                className="mt-3 px-4 py-2 bg-[#63b2c4] text-white rounded-md"
+                                className="mt-3 px-4 py-2 bg-[#016252] text-white rounded-md"
                                 onClick={() => setShowInside(!showInside)}
                             >
                                 {showInside ? "Show Outside Color" : "Show Inside Color"}
@@ -507,7 +507,7 @@ export default function AluminiumShaped() {
                                 <div className="w-[135px] h-[220px] absolute top-[28px] left-[18px] opacity-70" style={{ backgroundColor: blindcolor ? blindcolor.color : 'green' }}></div>
 
                                 <button
-                                    className="mt-3 px-4 py-2 bg-[#63b2c4] text-white rounded-md"
+                                    className="mt-3 px-4 py-2 bg-[#016252] text-white rounded-md"
                                     onClick={() => setShowInside(!showInside)}
                                 >
                                     {showInside ? "Show Outside Color" : "Show Inside Color"}
@@ -534,7 +534,7 @@ export default function AluminiumShaped() {
                             </div>
                             <div
                                 className="p-4 text-white font-semibold md:max-w-[416px] z-30 md:absolute md:top-28 left-0"
-                                style={{ background: "rgb(99, 178, 196)" }}
+                                style={{ background: "#016252" }}
                             >
                                 <p className="text-center text-2xl mb-4">Enter Dimensions</p>
                                 <div className="flex gap-8 max-w-96 mb-4">
@@ -588,7 +588,7 @@ export default function AluminiumShaped() {
                                 {Conf.map((conf) => (
                                     <div
                                         key={conf.name}
-                                        className={`border rounded-lg p-2 ${selectedConf?.name === conf.name ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                        className={`border rounded-lg p-2 ${selectedConf?.name === conf.name ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                         onClick={() => handleConfSelect(conf)}
                                     >
                                         <img src={conf.image} alt={conf.name} className="w-32 h-32 object-contain" />
@@ -638,7 +638,7 @@ export default function AluminiumShaped() {
 
                                 {Object.entries(colorOptionsoutside).map(([name, { color }]) => (
                                     <div key={name} className={`p-3 rounded-md border border-[#dfdede] hover:bg-[#e2f4f4] 
-                        ${outsidecolor === name ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"}
+                        ${outsidecolor === name ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"}
                     `} onClick={() => handleoutsideColorChange(name)} >
 
                                         <div className="md:w-[200px] md:h-[150px] w-[130px] h-[100px]" style={{ backgroundColor: color }} ></div>
@@ -661,7 +661,7 @@ export default function AluminiumShaped() {
 
                                 {Object.entries(colorOptionsinside).map(([name, { color, image }]) => (
                                     <div key={name} className={`p-3 rounded-md border border-[#dfdede] hover:bg-[#e2f4f4] 
-                            ${insidecolor === name ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"}
+                            ${insidecolor === name ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"}
                         `} onClick={() => handleinsideColorChange(name)} >
 
                                         <div className="md:w-[200px] md:h-[150px] w-[130px] h-[100px]" style={{ backgroundColor: color }} ></div>
@@ -682,7 +682,7 @@ export default function AluminiumShaped() {
                             <div className="flex justify-center gap-10 flex-wrap cursor-pointer px-3 md:px-0">
                                 {Cill.map((cill) => (
                                     <div key={cill.name} onClick={() => handleCillSelect(cill.name)}
-                                        className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedCill === cill?.name ? 'border-[#63b2c4] bg-[#e2f4f4]' : ''}`}
+                                        className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedCill === cill?.name ? 'border-[#016252] bg-[#e2f4f4]' : ''}`}
                                     >
                                         <img src={cill.image} height={cill.h} width={cill.w} className="object-contain" />
                                         <div className="text-center mt-2">{cill.name}</div>
@@ -704,7 +704,7 @@ export default function AluminiumShaped() {
                                         {Glass.map((glass) => (
                                             <div key={glass.name} onClick={() => handleglass(glass)}
                                                 className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectglass?.name === glass.name)
-                                                    ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                                    ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                             >
                                                 <img src={glass.image} height="150" width="150" className="object-contain" />
                                                 <div className="text-center mt-2">{glass.name}</div>
@@ -841,7 +841,7 @@ export default function AluminiumShaped() {
                         <div
                             key={section.id}
                             className={`font-bold px-5 pt-2 pb-3 text-[12.8px] whitespace-nowrap
-                    ${section.id <= currentstep ? "bg-[#63b2c4] text-white" : "text-[#63b2c4]"}
+                    ${section.id <= currentstep ? "bg-[#016252] text-white" : "text-[#016252]"}
                     ${section.id === currentstep ? "rounded-tr-lg rounded-br-lg" : ""}
                 `}
                         >

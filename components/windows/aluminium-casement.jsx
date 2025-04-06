@@ -622,7 +622,7 @@ export default function AluminiumCasement() {
                             </div>
                             <div
                                 className="p-4 text-white font-semibold md:max-w-[416px] z-30 md:absolute md:top-28 left-0"
-                                style={{ background: "rgb(99, 178, 196)" }}
+                                style={{ background: "#016252" }}
                             >
                                 <p className="text-center text-2xl mb-4">Enter Dimensions</p>
                                 <div className="flex gap-8 max-w-96 mb-4">
@@ -676,7 +676,7 @@ export default function AluminiumCasement() {
                                         {Frame.map((frame) => (
                                             <div key={frame.name} onClick={() => handleFrame(frame)}
                                                 className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectframe?.name === frame.name)
-                                                    ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                                    ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                             >
                                                 <img src={frame.image} height="150" width="150" className="object-contain" />
                                                 <div className="text-center mt-2">{frame.name}</div>
@@ -699,7 +699,7 @@ export default function AluminiumCasement() {
 
                                 {Object.entries(colorOptionsoutside).map(([name, { color }]) => (
                                     <div key={name} className={`p-3 rounded-md border border-[#dfdede] hover:bg-[#e2f4f4] 
-                            ${outsidecolor === name ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"}
+                            ${outsidecolor === name ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"}
                         `} onClick={() => handleoutsideColorChange(name)} >
 
                                         <div className="md:w-[200px] md:h-[150px] w-[130px] h-[100px]" style={{ backgroundColor: color }} ></div>
@@ -722,7 +722,7 @@ export default function AluminiumCasement() {
 
                                 {Object.entries(colorOptionsinside).map(([name, { color, image }]) => (
                                     <div key={name} className={`p-3 rounded-md border border-[#dfdede] hover:bg-[#e2f4f4] 
-                            ${insidecolor === name ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"}
+                            ${insidecolor === name ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"}
                         `} onClick={() => handleinsideColorChange(name)} >
 
                                         <div className="md:w-[200px] md:h-[150px] w-[130px] h-[100px]" style={{ backgroundColor: color }} ></div>
@@ -743,7 +743,7 @@ export default function AluminiumCasement() {
                                 <div className="flex justify-center gap-10 flex-wrap cursor-pointer px-3 md:px-0">
                                     {Window.map((window) => (
                                         <div key={window.name} onClick={() => handleWindow(window)}
-                                            className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedwindow?.name === window?.name ? 'border-[#63b2c4] bg-[#e2f4f4]' : ''}`}
+                                            className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedwindow?.name === window?.name ? 'border-[#016252] bg-[#e2f4f4]' : ''}`}
                                         >
                                             <img src={window.Optionimage} height={100} width={100} className="object-contain" />
                                             <div className="text-center mt-2">{window.name}</div>
@@ -793,7 +793,7 @@ export default function AluminiumCasement() {
                             <div className="flex justify-center gap-10 flex-wrap cursor-pointer px-3 md:px-0">
                                 {Cill.map((cill) => (
                                     <div key={cill.name} onClick={() => handleCillSelect(cill.name)}
-                                        className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedCill === cill?.name ? 'border-[#63b2c4] bg-[#e2f4f4]' : ''}`}
+                                        className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedCill === cill?.name ? 'border-[#016252] bg-[#e2f4f4]' : ''}`}
                                     >
                                         <img src={cill.image} height={cill.h} width={cill.w} className="object-contain" />
                                         <div className="text-center mt-2">{cill.name}</div>
@@ -817,7 +817,7 @@ export default function AluminiumCasement() {
                                                 : handleBlind(blind)
                                             }
                                             className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectedBlind?.name === blind.name || (HandleNoBlind && blind.name === "No Blind"))
-                                                ? "border-[#63b2c4] bg-[#e2f4f4]"
+                                                ? "border-[#016252] bg-[#e2f4f4]"
                                                 : ""
                                                 }`}
                                         >
@@ -835,7 +835,7 @@ export default function AluminiumCasement() {
                                         <div className="flex justify-center gap-10 flex-wrap cursor-pointer mb-16">
                                             {BlindsColor.map((color) => (
                                                 <div key={color.name} onClick={() => handleBlindColor(color)}
-                                                    className={`border-2 p-4 hover:bg-[#e2f4f4] ${blindcolor?.name === color.name ? "border-[#63b2c4] bg-[#e2f4f4]" : ""
+                                                    className={`border-2 p-4 hover:bg-[#e2f4f4] ${blindcolor?.name === color.name ? "border-[#016252] bg-[#e2f4f4]" : ""
                                                         }`}
                                                 >
 
@@ -868,7 +868,7 @@ export default function AluminiumCasement() {
                                             {Glass.map((glass) => (
                                                 <div key={glass.name} onClick={() => handleglass(glass)}
                                                     className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectglass?.name === glass.name)
-                                                        ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                                        ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                                 >
                                                     <img src={glass.image} height="150" width="150" className="object-contain" />
                                                     <div className="text-center mt-2">{glass.name}</div>
@@ -883,7 +883,7 @@ export default function AluminiumCasement() {
                                             {NoBlindGlass.map((glass) => (
                                                 <div key={glass.name} onClick={() => handleglass(glass)}
                                                     className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectglass?.name === glass.name)
-                                                        ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                                        ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                                 >
                                                     <img src={glass.image} height="150" width="150" className="object-contain" />
                                                     <div className="text-center mt-2">{glass.name}</div>
@@ -1065,7 +1065,7 @@ export default function AluminiumCasement() {
                         <div
                             key={section.id}
                             className={`font-bold px-5 pt-2 pb-3 text-[12.8px] whitespace-nowrap
-                    ${section.id <= currentstep ? "bg-[#63b2c4] text-white" : "text-[#63b2c4]"}
+                    ${section.id <= currentstep ? "bg-[#016252] text-white" : "text-[#016252]"}
                     ${section.id === currentstep ? "rounded-tr-lg rounded-br-lg" : ""}
                 `}
                         >

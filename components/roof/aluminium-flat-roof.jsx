@@ -310,7 +310,7 @@ export default function AluminiumFlatRoof() {
 
                                 {Object.entries(colorOptionsoutside).map(([name, { color }]) => (
                                     <div key={name} className={`p-3 rounded-md border border-[#dfdede] hover:bg-[#e2f4f4] 
-                            ${outsidecolor === name ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"}
+                            ${outsidecolor === name ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"}
                         `} onClick={() => handleoutsideColorChange(name)} >
 
                                         <div className="md:w-[200px] md:h-[150px] w-[130px] h-[100px]" style={{ backgroundColor: color }} ></div>
@@ -333,7 +333,7 @@ export default function AluminiumFlatRoof() {
 
                                 {Object.entries(colorOptionsinside).map(([name, { color, image }]) => (
                                     <div key={name} className={`p-3 rounded-md border border-[#dfdede] hover:bg-[#e2f4f4] 
-                            ${insidecolor === name ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"}
+                            ${insidecolor === name ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"}
                         `} onClick={() => handleinsideColorChange(name)} >
 
                                         <div className="md:w-[200px] md:h-[150px] w-[130px] h-[100px]" style={{ backgroundColor: color }} ></div>
@@ -359,7 +359,7 @@ export default function AluminiumFlatRoof() {
                                         {Glass.map((glass) => (
                                             <div key={glass.name} onClick={() => handleglass(glass)}
                                                 className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectglass?.name === glass.name)
-                                                    ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                                    ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                             >
                                                 <img src={glass.image} height="150" width="150" className="object-contain" />
                                                 <div className="text-center mt-2">{glass.name}</div>
@@ -402,7 +402,7 @@ export default function AluminiumFlatRoof() {
                             <div
                                 key={section.id}
                                 className={`font-bold px-5 pt-2 pb-3 text-[12.8px] whitespace-nowrap
-                    ${section.id <= currentstep ? "bg-[#63b2c4] text-white" : "text-[#63b2c4]"}
+                    ${section.id <= currentstep ? "bg-[#016252] text-white" : "text-[#016252]"}
                     ${section.id === currentstep ? "rounded-tr-lg rounded-br-lg" : ""}
                 `}
                             >

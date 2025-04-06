@@ -764,8 +764,6 @@ export default function Bifold() {
 
 
 
-
-
             <div className="md:w-[500px] md:ml-[50%] my-[2%]">
                 <div className="flex  justify-between px-5">
                     <div className="md:w-[250px]">
@@ -794,7 +792,7 @@ export default function Bifold() {
 
 
                             <div className="flex justify-center">
-                                {step2isClicked && (<button className="px-2 py-1 bg-[#63b2c4] hover:scale-105 transition-transform active:translate-y-1 text-white rounded-sm"
+                                {step2isClicked && (<button className="px-2 py-1 bg-[#016252] hover:scale-105 transition-transform active:translate-y-1 text-white rounded-sm"
                                     onClick={toggleView}>{step2ViewInside}</button>)}
                             </div>
                         </>
@@ -812,7 +810,7 @@ export default function Bifold() {
 
 
                             <div className="flex justify-center">
-                                {step2isClicked && (<button className="px-2 py-1 bg-[#63b2c4] hover:scale-105 transition-transform active:translate-y-1 text-white rounded-sm"
+                                {step2isClicked && (<button className="px-2 py-1 bg-[#016252] hover:scale-105 transition-transform active:translate-y-1 text-white rounded-sm"
                                     onClick={toggleView}>{step2ViewInside}</button>)}
                             </div>
                         </>
@@ -833,7 +831,7 @@ export default function Bifold() {
                                 className="w-[150px] h-[350px] "
                             />
                             <button
-                                className="mt-3 px-4 py-2 bg-[#63b2c4] text-white rounded-md"
+                                className="mt-3 px-4 py-2 bg-[#016252] text-white rounded-md"
                                 onClick={() => setShowInside(!showInside)}
                             >
                                 {showInside ? "Show Outside Color" : "Show Inside Color"}
@@ -848,7 +846,7 @@ export default function Bifold() {
                                 className="w-[150px] h-[350px]"
                             />
                             <button
-                                className="mt-3 px-4 py-2 bg-[#63b2c4] text-white rounded-md"
+                                className="mt-3 px-4 py-2 bg-[#016252] text-white rounded-md"
                                 onClick={() => setShowInside(!showInside)}
                             >
                                 {showInside ? "Show Outside Color" : "Show Inside Color"}
@@ -871,7 +869,7 @@ export default function Bifold() {
                                 <div className="w-[47px] h-[220px] absolute top-[38px] left-[28px] opacity-70" style={{ backgroundColor: blindcolor ? blindcolor.color : 'green' }}></div>
 
                                 <button
-                                    className="mt-3 px-4 py-2 bg-[#63b2c4] text-white rounded-md"
+                                    className="mt-3 px-4 py-2 bg-[#016252] text-white rounded-md"
                                     onClick={() => setShowInside(!showInside)}
                                 >
                                     {showInside ? "Show Outside Color" : "Show Inside Color"}
@@ -898,7 +896,7 @@ export default function Bifold() {
                             </div>
                             <div
                                 className="p-4 text-white font-semibold md:max-w-[416px] z-30 md:absolute md:top-28 left-0"
-                                style={{ background: "rgb(99, 178, 196)" }}
+                                style={{ background: "#016252" }}
                             >
                                 <p className="text-center text-2xl mb-4">Enter Dimensions</p>
                                 <div className="flex gap-8 max-w-96 mb-4">
@@ -949,7 +947,7 @@ export default function Bifold() {
                                 {[2, 3, 4, 5, 6, 7].map((num) => (
                                     <button
                                         key={num}
-                                        className={`px-2 py-1 border border-[#63b2c4] ${step2isClicked === num ? "bg-[#63b2c4] text-white" : "bg-white text-[#63b2c4]"
+                                        className={`px-2 py-1 border border-[#016252] ${step2isClicked === num ? "bg-[#016252] text-white" : "bg-white text-[#016252]"
                                             }`}
                                         onClick={() => step2pane(num)}
                                     >
@@ -988,7 +986,7 @@ export default function Bifold() {
 
                             <div className="mt-4 flex flex-wrap justify-center gap-[30px]">
                                 {selectedImages.map(({ src, name }) => (
-                                    <div key={src} onClick={() => handleImageClick(src)} className={`text-center p-3 border-2 cursor-pointer rounded-md hover:bg-[#e2f4f4] ${selectedImage === src ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"
+                                    <div key={src} onClick={() => handleImageClick(src)} className={`text-center p-3 border-2 cursor-pointer rounded-md hover:bg-[#e2f4f4] ${selectedImage === src ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"
                                         }`}>
                                         <img height={100} width={130} src={src} />
                                         <p className="mt-2 text-sm">{name}</p>
@@ -1015,7 +1013,7 @@ export default function Bifold() {
 
                                 {Object.entries(colorOptionsoutside).map(([name, { color }]) => (
                                     <div key={name} className={`p-3 rounded-md border border-[#dfdede] hover:bg-[#e2f4f4] 
-                            ${outsidecolor === name ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"}
+                            ${outsidecolor === name ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"}
                         `} onClick={() => handleoutsideColorChange(name)} >
 
                                         <div className="md:w-[200px] md:h-[150px] w-[130px] h-[100px]" style={{ backgroundColor: color }} ></div>
@@ -1038,7 +1036,7 @@ export default function Bifold() {
 
                                 {Object.entries(colorOptionsinside).map(([name, { color, image }]) => (
                                     <div key={name} className={`p-3 rounded-md border border-[#dfdede] hover:bg-[#e2f4f4] 
-                            ${insidecolor === name ? "border-[#63b2c4] bg-[#e2f4f4]" : " border-[#949596]"}
+                            ${insidecolor === name ? "border-[#016252] bg-[#e2f4f4]" : " border-[#949596]"}
                         `} onClick={() => handleinsideColorChange(name)} >
 
                                         <div className="md:w-[200px] md:h-[150px] w-[130px] h-[100px]" style={{ backgroundColor: color }} ></div>
@@ -1059,7 +1057,7 @@ export default function Bifold() {
                             <div className="flex justify-center gap-10 flex-wrap cursor-pointer px-3 md:px-0">
                                 {Cill.map((cill) => (
                                     <div key={cill.name} onClick={() => handleCillSelect(cill.name)}
-                                        className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedCill === cill?.name ? 'border-[#63b2c4] bg-[#e2f4f4]' : ''}`}
+                                        className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedCill === cill?.name ? 'border-[#016252] bg-[#e2f4f4]' : ''}`}
                                     >
                                         <img src={cill.image} height={cill.h} width={cill.w} className="object-contain" />
                                         <div className="text-center mt-2">{cill.name}</div>
@@ -1082,7 +1080,7 @@ export default function Bifold() {
                                             : handleSingleHandleSelect(handle)
                                         }
                                         className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectedHandle?.name === handle.name || (isDualSelected && handle.name === "Dual Color"))
-                                            ? "border-[#63b2c4] bg-[#e2f4f4]"
+                                            ? "border-[#016252] bg-[#e2f4f4]"
                                             : ""
                                             }`}
                                     >
@@ -1102,7 +1100,7 @@ export default function Bifold() {
                                             <div
                                                 key={color.name}
                                                 onClick={() => handleOutsideHandleSelect(color)}
-                                                className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedOutsideHandle?.name === color.name ? "border-[#63b2c4] bg-[#e2f4f4]" : ""
+                                                className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedOutsideHandle?.name === color.name ? "border-[#016252] bg-[#e2f4f4]" : ""
                                                     }`}
                                             >
                                                 <img src={color.image} height="100" width="100" className="object-contain" />
@@ -1118,7 +1116,7 @@ export default function Bifold() {
                                             <div
                                                 key={color.name}
                                                 onClick={() => handleInsideHandleSelect(color)}
-                                                className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedInsideHandle?.name === color.name ? "border-[#63b2c4] bg-[#e2f4f4]" : ""
+                                                className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedInsideHandle?.name === color.name ? "border-[#016252] bg-[#e2f4f4]" : ""
                                                     }`}
                                             >
                                                 <img src={color.image} height="100" width="100" className="object-contain" />
@@ -1149,7 +1147,7 @@ export default function Bifold() {
                                                 : handleBlind(blind)
                                             }
                                             className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectedBlind?.name === blind.name || (HandleNoBlind && blind.name === "No Blind"))
-                                                ? "border-[#63b2c4] bg-[#e2f4f4]"
+                                                ? "border-[#016252] bg-[#e2f4f4]"
                                                 : ""
                                                 }`}
                                         >
@@ -1167,7 +1165,7 @@ export default function Bifold() {
                                         <div className="flex justify-center gap-10 flex-wrap cursor-pointer mb-16">
                                             {BlindsColor.map((color) => (
                                                 <div key={color.name} onClick={() => handleBlindColor(color)}
-                                                    className={`border-2 p-4 hover:bg-[#e2f4f4] ${blindcolor?.name === color.name ? "border-[#63b2c4] bg-[#e2f4f4]" : ""
+                                                    className={`border-2 p-4 hover:bg-[#e2f4f4] ${blindcolor?.name === color.name ? "border-[#016252] bg-[#e2f4f4]" : ""
                                                         }`}
                                                 >
 
@@ -1197,7 +1195,7 @@ export default function Bifold() {
                                             {Glass.map((glass) => (
                                                 <div key={glass.name} onClick={() => handleglass(glass)}
                                                     className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectglass?.name === glass.name)
-                                                        ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                                        ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                                 >
                                                     <img src={glass.image} height="150" width="150" className="object-contain" />
                                                     <div className="text-center mt-2">{glass.name}</div>
@@ -1212,7 +1210,7 @@ export default function Bifold() {
                                             {NoBlindGlass.map((glass) => (
                                                 <div key={glass.name} onClick={() => handleglass(glass)}
                                                     className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectglass?.name === glass.name)
-                                                        ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                                        ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                                 >
                                                     <img src={glass.image} height="150" width="150" className="object-contain" />
                                                     <div className="text-center mt-2">{glass.name}</div>
@@ -1238,7 +1236,7 @@ export default function Bifold() {
                                     {Threshold.map((threshold) => (
                                         <div key={threshold.name} onClick={() => handleThreshold(threshold)}
                                             className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectthreshold?.name === threshold.name)
-                                                ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                                ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                         >
                                             <img src={threshold.image} height="150" width="150" className="object-contain" />
                                             <div className="text-center mt-2">{threshold.name}</div>
@@ -1457,7 +1455,7 @@ export default function Bifold() {
                         <div
                             key={section.id}
                             className={`font-bold px-5 pt-2 pb-3 text-[12.8px] whitespace-nowrap
-                    ${section.id <= currentstep ? "bg-[#63b2c4] text-white" : "text-[#63b2c4]"}
+                    ${section.id <= currentstep ? "bg-[#016252] text-white" : "text-[#016252]"}
                     ${section.id === currentstep ? "rounded-tr-lg rounded-br-lg" : ""}
                 `}
                         >

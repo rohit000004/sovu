@@ -487,7 +487,7 @@ export default function Aluminiumupvc() {
                             </div>
                             <div
                                 className="p-4 text-white font-semibold md:max-w-[416px] z-30 md:absolute md:top-28 left-0"
-                                style={{ background: "rgb(99, 178, 196)" }}
+                                style={{ background: "#016252" }}
                             >
                                 <p className="text-center text-2xl mb-4">Enter Dimensions</p>
                                 <div className="flex gap-8 max-w-96 mb-4">
@@ -541,7 +541,7 @@ export default function Aluminiumupvc() {
                                 {Frame.map((frame) => (
                                     <div
                                         key={frame.name}
-                                        className={`border rounded-lg p-2 ${selectedframe?.name === frame.name ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                        className={`border rounded-lg p-2 ${selectedframe?.name === frame.name ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                         onClick={() => handleFrame(frame)}
                                     >
                                         <img src={frame.image} className="w-32 h-32 object-contain" />
@@ -564,7 +564,7 @@ export default function Aluminiumupvc() {
                                 {OutsideColor.map((color) => (
                                     <div
                                         key={color.name}
-                                        className={`border rounded-lg p-2 ${outsidecolor?.name === color.name ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                        className={`border rounded-lg p-2 ${outsidecolor?.name === color.name ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                         onClick={() => handleOutsideColor(color)}
                                     >
                                         <img src={color.image} className="w-32 h-32 object-contain" />
@@ -587,7 +587,7 @@ export default function Aluminiumupvc() {
                                 {InsideColor.map((color) => (
                                     <div
                                         key={color.name}
-                                        className={`border rounded-lg p-2 ${insidecolor?.name === color.name ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                        className={`border rounded-lg p-2 ${insidecolor?.name === color.name ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                         onClick={() => handleInsideColor(color)}
                                     >
                                         <img src={color.image} className="w-32 h-32 object-contain" />
@@ -609,7 +609,7 @@ export default function Aluminiumupvc() {
                                 <div className="flex justify-center gap-10 flex-wrap cursor-pointer px-3 md:px-0">
                                     {Window.map((window) => (
                                         <div key={window.name} onClick={() => handleWindow(window)}
-                                            className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedwindow?.name === window?.name ? 'border-[#63b2c4] bg-[#e2f4f4]' : ''}`}
+                                            className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedwindow?.name === window?.name ? 'border-[#016252] bg-[#e2f4f4]' : ''}`}
                                         >
                                             <img src={window.Optionimage} height={100} width={100} className="object-contain" />
                                             <div className="text-center mt-2">{window.name}</div>
@@ -660,7 +660,7 @@ export default function Aluminiumupvc() {
                                 {FrameWidth.map((frame) => (
                                     <div
                                         key={frame.name}
-                                        className={`border rounded-lg p-2 ${selectedframewidth?.name === frame.name ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                        className={`border rounded-lg p-2 ${selectedframewidth?.name === frame.name ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                         onClick={() => handleFrameWidth(frame)}
                                     >
                                         <img src={frame.image} className="w-32 h-32 object-contain" />
@@ -680,7 +680,7 @@ export default function Aluminiumupvc() {
                             <div className="flex justify-center gap-10 flex-wrap cursor-pointer px-3 md:px-0">
                                 {Cill.map((cill) => (
                                     <div key={cill.name} onClick={() => handleCillSelect(cill.name)}
-                                        className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedCill === cill?.name ? 'border-[#63b2c4] bg-[#e2f4f4]' : ''}`}
+                                        className={`border-2 p-4 hover:bg-[#e2f4f4] ${selectedCill === cill?.name ? 'border-[#016252] bg-[#e2f4f4]' : ''}`}
                                     >
                                         <img src={cill.image} height={cill.h} width={cill.w} className="object-contain" />
                                         <div className="text-center mt-2">{cill.name}</div>
@@ -702,7 +702,7 @@ export default function Aluminiumupvc() {
                                         {Glass.map((glass) => (
                                             <div key={glass.name} onClick={() => handleglass(glass)}
                                                 className={`border-2 p-4 hover:bg-[#e2f4f4] ${(selectglass?.name === glass.name)
-                                                    ? "border-[#63b2c4] bg-[#e2f4f4]" : ""}`}
+                                                    ? "border-[#016252] bg-[#e2f4f4]" : ""}`}
                                             >
                                                 <img src={glass.image} height="100" width="100" className="object-contain" />
                                                 <div className="text-center mt-2 max-w-[95px] text-sm">{glass.name}</div>
@@ -860,7 +860,7 @@ export default function Aluminiumupvc() {
                         <div
                             key={section.id}
                             className={`font-bold px-5 pt-2 pb-3 text-[12.8px] whitespace-nowrap
-                    ${section.id <= currentstep ? "bg-[#63b2c4] text-white" : "text-[#63b2c4]"}
+                    ${section.id <= currentstep ? "bg-[#016252] text-white" : "text-[#016252]"}
                     ${section.id === currentstep ? "rounded-tr-lg rounded-br-lg" : ""}
                 `}
                         >
